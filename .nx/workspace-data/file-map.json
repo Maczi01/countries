@@ -1,0 +1,249 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.3.2",
+  "deps": {
+    "@angular/animations": "^18.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/forms": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",
+    "@angular/router": "^18.0.0",
+    "@eslint/js": "^9.6.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^18.0.6",
+    "@angular/cli": "^18.0.6",
+    "@angular/compiler-cli": "^18.0.0",
+    "@types/jasmine": "~5.1.0",
+    "angular-eslint": "18.1.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.2",
+    "tailwindcss": "^3.4.4",
+    "typescript": "~5.4.2",
+    "typescript-eslint": "7.14.1"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".angular/cache/18.0.6/countries/.tsbuildinfo",
+        "hash": "5958142688320529868"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/@angular_core.js",
+        "hash": "9731924253163192124"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/@angular_core.js.map",
+        "hash": "9947606979680686569"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/@angular_platform-browser.js",
+        "hash": "11395962486533363408"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/@angular_platform-browser.js.map",
+        "hash": "9947606979680686569"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/@angular_router.js",
+        "hash": "5658971530125059253"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/@angular_router.js.map",
+        "hash": "1815451861821906145"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/_metadata.json",
+        "hash": "14900207400956386979"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/chunk-C7WUDN6V.js",
+        "hash": "17879340966015603550"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/chunk-C7WUDN6V.js.map",
+        "hash": "10832138096091000675"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/chunk-NQ3SZXLJ.js",
+        "hash": "4651896383650345041"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/chunk-NQ3SZXLJ.js.map",
+        "hash": "324577596899028628"
+      },
+      {
+        "file": ".angular/cache/18.0.6/vite/deps/package.json",
+        "hash": "8630294688235076505"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "17241496168097493888"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7993254109078770755"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "412266347129937990"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10175894702052279752"
+      },
+      {
+        "file": ".idea/.gitignore",
+        "hash": "16259663310133185705"
+      },
+      {
+        "file": ".idea/countries.iml",
+        "hash": "5360714243707778941"
+      },
+      {
+        "file": ".idea/inspectionProfiles/Project_Default.xml",
+        "hash": "8912173605315939135"
+      },
+      {
+        "file": ".idea/jsLinters/eslint.xml",
+        "hash": "3910601925630749546"
+      },
+      {
+        "file": ".idea/modules.xml",
+        "hash": "14098749338234826228"
+      },
+      {
+        "file": ".idea/workspace.xml",
+        "hash": "3277406683488366688"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "11934160580685414355"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17406702432687230417"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "10093397977228577162"
+      },
+      {
+        "file": "README.md",
+        "hash": "5215068367095347833"
+      },
+      {
+        "file": "angular.json",
+        "hash": "31999853719649227"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "2791545525171529005"
+      },
+      {
+        "file": "package.json",
+        "hash": "8388002822739444964"
+      },
+      {
+        "file": "public/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "3176606845818583185"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "3272829664076435952"
+      },
+      {
+        "file": "src/app/app.config.ts",
+        "hash": "16561019206697382666"
+      },
+      {
+        "file": "src/app/app.routes.ts",
+        "hash": "16929368031070990437"
+      },
+      {
+        "file": "src/app/pages/explore/explore.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/pages/explore/explore.component.html",
+        "hash": "10098454503379172657"
+      },
+      {
+        "file": "src/app/pages/explore/explore.component.spec.ts",
+        "hash": "14576034295455838116"
+      },
+      {
+        "file": "src/app/pages/explore/explore.component.ts",
+        "hash": "13049414261986444238"
+      },
+      {
+        "file": "src/app/pages/guess/guess.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/pages/guess/guess.component.html",
+        "hash": "13865088152342327797"
+      },
+      {
+        "file": "src/app/pages/guess/guess.component.spec.ts",
+        "hash": "9158272484126919989"
+      },
+      {
+        "file": "src/app/pages/guess/guess.component.ts",
+        "hash": "16410728954842619799"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "11821701013831065858"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "src/styles.css",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "14560978611694835822"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "537034293907716874"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "11023685540591620072"
+      }
+    ]
+  }
+}
