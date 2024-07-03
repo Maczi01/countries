@@ -8,11 +8,16 @@ import { Country } from '../types/Country';
 })
 export class CountryService {
   private baseUrl = 'https://restcountries.com/v3.1';
-  // private dataSource = new BehaviorSubject<Country[]>([]);
   private http = inject(HttpClient);
 
-  fetchCountries() {
-    return this.http.get<Country[]>(`${this.baseUrl}/all`)
+  private postsSubject = new BehaviorSubject<Country[]>([]);
+  countries$ = this.postsSubject.asObservable();
+
+  fetchCountries(): Observable<Country[]> {
+    return this.http.get<Country[]>(this.baseUrl + '/all')
+      .pipe(
+        tap(posts => this.postsSubject.next(posts))
+      );
   }
 
   // getCountries(filter?: string, input?: string): void {

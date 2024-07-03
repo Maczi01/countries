@@ -14,36 +14,29 @@ import { FiltersComponent } from '../../components/filters/filters.component';
   templateUrl: './explore.component.html',
 })
 export class ExploreComponent implements OnInit {
-  // countries: Country[] = [];
-  countries$: Observable<Array<Country>> | null = null;
   // form: FormGroup;
   isLoading: boolean = false;
   error: string | null = null;
+  countries$: Observable<Country[]>;
   private countryService = inject(CountryService);
 
-  ngOnInit() {
-     this.countries$ = this.countryService.fetchCountries();
-    // }
-    // this.countryService.fetchCountries().subscribe({
-    //   next: data => {
-    //     this.countries$ = data;
-    //   },
-    //   error: err => {
-    //     this.error = err;
-    //   },
-    // });
-    // }
-    // fetchCountries().subscribe({
-    //   next: data => {
-    //     this.countries = data;
-    //   },
-    //   error: err => {
-    //     this.error = err;
-    //   },
-    // });
+  constructor() {
+    this.countries$ = this.countryService.countries$;
   }
 
-  // }
+  ngOnInit() {
+    this.countryService.fetchCountries().subscribe(
+      {
+        next: () => {
+          this.isLoading = false;
+        },
+        error: err => {
+          this.error = err;
+          this.isLoading = false
+        },
+      },
+    );
+  }
 
   // constructor(
   //   private countryService: CountryService,
