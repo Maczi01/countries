@@ -1,7 +1,13 @@
 <div class="flex flex-row space-x-2 my-4 items-center justify-around">
-  <app-filters (filterChange)="onFilterChange($event)" />
+  <app-filters
+    (filterChange)="onFilterChange($event)" />
 </div>
 
+@if(isLoading) {
+<div class="flex justify-center items-center h-96">
+  <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
+</div>
+} @else{
 @if(error){
 <span>Not found, try again</span>
 } @else {
@@ -10,6 +16,7 @@
   <app-country-card [country]="country"/>
 }
 </div>
+}
 }
 
 

@@ -2,6 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
+type Filters = { input: string; filter: string; sort: string };
+
 @Component({
   selector: 'app-filters',
   standalone: true,
@@ -9,7 +11,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
   templateUrl: './filters.component.html',
 })
 export class FiltersComponent implements OnInit {
-  @Output() filterChange = new EventEmitter<{ input: string; filter: string; sort: string }>();
+  @Output() filterChange = new EventEmitter<Filters>();
 
   form: FormGroup;
 
@@ -21,10 +23,16 @@ export class FiltersComponent implements OnInit {
     });
   }
 
+  changeFilters(value: Filters) {
+    this.filterChange.emit({ input: value.input, filter: value.filter, sort: value.sort })
+  }
+
   ngOnInit() {
-    this.form.valueChanges.pipe(debounceTime(300), distinctUntilChanged()).subscribe(values => {
-      this.filterChange.emit(values);
-    });
+    this.form.valueChanges
+      .pipe(debounceTime(300), distinctUntilChanged())
+      .subscribe(values => {
+        this.filterChange.emit(values);
+      });
   }
 
   get inputControl(): FormControl {
