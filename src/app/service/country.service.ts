@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
+import {BehaviorSubject, Observable, tap, throwError} from 'rxjs';
 import { Country } from '../types/Country';
 
 @Injectable({
@@ -8,26 +8,33 @@ import { Country } from '../types/Country';
 })
 export class CountryService {
   private baseUrl = 'https://restcountries.com/v3.1';
+  // private dataSource = new BehaviorSubject<Country[]>([]);
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) {}
-
-  getCountries(filter?: string, input?: string): Observable<Country[]> {
-    let url = `${this.baseUrl}/all`;
-
-    if (input && input.length >= 3) {
-      if (!filter) {
-        url = `${this.baseUrl}/name/${input}`;
-      } else {
-        url = `${this.baseUrl}/${filter}/${input}`;
-      }
-    }
-
-    return this.http.get<Country[]>(url).pipe(catchError(this.handleError));
+  fetchCountries() {
+    return this.http.get<Country[]>(`${this.baseUrl}/all`)
   }
 
-  getRandomCountry(): Observable<Country[]> {
-    return this.http.get<Country[]>(`${this.baseUrl}/all`).pipe(catchError(this.handleError));
-  }
+  // getCountries(filter?: string, input?: string): void {
+  //   let url = `${this.baseUrl}/all`;
+  //
+  //   if (input && input.length >= 3) {
+  //     if (!filter || filter === 'country') {
+  //       url = `${this.baseUrl}/name/${input}`;
+  //     } else {
+  //       url = `${this.baseUrl}/${filter}/${input}`;
+  //     }
+  //   }
+  //
+  //   this.http
+  //     .get<Country[]>(url)
+  //     .pipe(catchError(this.handleError))
+  //     .subscribe(data => this.countriesSubject.next(data));
+  // }
+
+  // getRandomCountry(): Observable<Country[]> {
+  //   return this.http.get<Country[]>(`${this.baseUrl}/all`).pipe(catchError(this.handleError));
+  // }
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 404) {

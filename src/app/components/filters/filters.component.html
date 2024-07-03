@@ -1,0 +1,68 @@
+<form [formGroup]="form" class="flex flex-row space-x-2 my-4 items-center justify-around">
+  <input
+    type="search"
+    placeholder="Filter..."
+    class="px-4 bg-gray-50 border rounded-lg border-gray-300 text-gray-900 shadow w-96 h-10"
+    [formControl]="inputControl"
+  />
+  <select class="bg-gray-50 border w-96 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+          [formControl]="filterControl">
+    <option value="country">Country</option>
+    <option value="currency">Currency</option>
+    <option value="language">Language</option>
+    <option value="capitol">Capitol</option>
+  </select>
+  <select class="bg-gray-50 w-96 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+          [formControl]="sortControl">
+    <option value="alphabetical">Alphabetical</option>
+    <option value="population">Population</option>
+  </select>
+</form>
+
+
+
+<!--<form [formGroup]="form" class="flex flex-row space-x-2 my-4 items-center justify-around">-->
+<!--  <input-->
+<!--    type="search"-->
+<!--    name="input"-->
+<!--    placeholder="Filter..."-->
+<!--    class="px-4 bg-gray-50 border rounded-lg border-gray-300 text-gray-900 shadow w-96 h-10"-->
+<!--    [formControl]="inputControl"-->
+<!--  />-->
+<!--  <select id="filter" class="bg-gray-50 border w-96 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"-->
+<!--          [formControl]="filterControl">-->
+<!--    <option value="country">Country</option>-->
+<!--    <option value="currency">Currency</option>-->
+<!--    <option value="language">Language</option>-->
+<!--    <option value="capitol">Capitol</option>-->
+<!--  </select>-->
+<!--  <select id="sort" class="bg-gray-50 w-96 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"-->
+<!--          [formControl]="sortControl">-->
+<!--    <option value="alphabetical">Alphabetical</option>-->
+<!--    <option value="population">Population</option>-->
+<!--  </select>-->
+<!--</form>-->
+
+
+
+<!--<form [formGroup]="form" class="flex flex-row space-x-2 my-4 items-center justify-around">-->
+<!--  <input-->
+<!--    type="search"-->
+<!--    name="input"-->
+<!--    placeholder="Filter..."-->
+<!--    class="px-4 bg-gray-50 border rounded-lg border-gray-300 text-gray-900 shadow w-96 h-10"-->
+<!--    [formControl]="inputControl"-->
+<!--  />-->
+<!--  <select id="filter" class="bg-gray-50 border w-96 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"-->
+<!--          [formControl]="filterControl">-->
+<!--    <option value="country">Country</option>-->
+<!--    <option value="currency">Currency</option>-->
+<!--    <option value="language">Language</option>-->
+<!--    <option value="capitol">Capitol</option>-->
+<!--  </select>-->
+<!--  <select id="sort" class="bg-gray-50 w-96 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"-->
+<!--          [formControl]="sortControl">-->
+<!--    <option value="alphabetical">Alphabetical</option>-->
+<!--    <option value="population">Population</option>-->
+<!--  </select>-->
+<!--</form>-->
