@@ -28,7 +28,7 @@
 } @else {
 <div  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   @for (country of countries; track country.name) {
-  <app-country-card [country]="country"></app-country-card>
+  <app-country-card [country]="country"/>
   }
 </div>
 }
